@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  bot:
+    build: .
+    command: sh -c "python ./src/bot/bot.py"
+    restart: always
+    stop_signal: SIGINT
+    env_file:
+      - ./.env
